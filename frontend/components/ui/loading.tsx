@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { useState, useEffect } from "react";
 
 interface LoadingProps {
-  size?: "sm" | "md" | "lg" | "xl";
+  size?: "sm" | "md" | "lg" | "xl" | "xs";
   text?: string;
   fullScreen?: boolean;
   className?: string;
@@ -33,7 +33,7 @@ function CustomLoadingAnimation({
   useEffect(() => {
     const interval = setInterval(() => {
       setDotCount((prev) => (prev + 1) % 4); // 0, 1, 2, 3 dots
-    }, 500);
+    }, 300); // Faster animation
 
     return () => clearInterval(interval);
   }, []);
@@ -45,7 +45,7 @@ function CustomLoadingAnimation({
       if (progress >= 100) {
         setIsComplete(true);
         if (onComplete) {
-          setTimeout(() => onComplete(), 500); // Longer delay to show completion
+          setTimeout(() => onComplete(), 200); // Shorter delay
         }
       }
     }
@@ -108,6 +108,7 @@ export function Loading({
   progress,
   onComplete,
   estimatedDuration,
+  size = "sm", // Default to smaller size
 }: LoadingProps) {
   // Always use custom animation with progress
   const content = (
