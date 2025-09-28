@@ -116,7 +116,7 @@ export default function PublicEventDetailsPage() {
       );
 
       console.log("Response status:", response.status);
-      let data: { success?: boolean; registration?: any; message?: string; error?: string } | null = null;
+      let data: { success?: boolean; registration?: { id: string; name: string; email: string; qrCode: string; registrationId: string; eventTitle: string; eventDate: string; venue: string; qrCodeData: string }; message?: string; error?: string } | null = null;
       let rawText = "";
       try {
         rawText = await response.text();

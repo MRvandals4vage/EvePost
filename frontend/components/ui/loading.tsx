@@ -226,7 +226,7 @@ export function InlineLoading({
 }
 
 // Hook for managing loading state with real async operations
-export function useLoadingWithProgress(_estimatedDuration?: number) {
+export function useLoadingWithProgress() {
   const [isLoading, setIsLoading] = useState(false);
   const [progress, setProgress] = useState(0);
 
