@@ -33,7 +33,7 @@ function CustomLoadingAnimation({
   useEffect(() => {
     const interval = setInterval(() => {
       setDotCount((prev) => (prev + 1) % 4); // 0, 1, 2, 3 dots
-    }, 300); // Faster animation
+    }, 200); // Even faster for cooler effect
 
     return () => clearInterval(interval);
   }, []);
@@ -91,8 +91,8 @@ function CustomLoadingAnimation({
           <div
             key={index}
             className={cn(
-              "w-3 h-8 border border-primary/30 transition-all duration-300",
-              index < filledBars ? "bg-white" : "bg-transparent"
+              "w-3 h-8 border border-primary/30 transition-all duration-300 rounded-sm",
+              index < filledBars ? "bg-gradient-to-t from-primary to-primary/60 animate-pulse" : "bg-transparent"
             )}
           />
         ))}
