@@ -35,7 +35,7 @@ export default function AboutPage() {
               <div>
                 <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
                 <p className="text-lg text-gray-300 mb-6">
-                  We believe that hosting successful events shouldn't be complicated. Whether you're organizing
+                  We believe that hosting successful events shouldn&apos;t be complicated. Whether you&apos;re organizing
                   a small workshop, a corporate conference, or a large festival, EvePost provides the tools
                   you need to manage registrations, check-ins, and analytics effortlessly.
                 </p>

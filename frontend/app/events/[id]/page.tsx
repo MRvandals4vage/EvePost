@@ -116,12 +116,12 @@ export default function PublicEventDetailsPage() {
       );
 
       console.log("Response status:", response.status);
-      let data: any = null;
+      let data: { success?: boolean; registration?: any; message?: string; error?: string } | null = null;
       let rawText = "";
       try {
         rawText = await response.text();
         data = rawText ? JSON.parse(rawText) : null;
-      } catch (e) {
+      } catch {
         console.warn("Failed to parse JSON response; raw text:", rawText);
       }
       console.log("Response data:", data);

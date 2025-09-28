@@ -88,7 +88,7 @@ function HeroSectionComponent() {
                             </div>
                             <div className="bg-neutral-800 p-8 rounded-2xl shadow-lg">
                                 <h3 className="text-2xl font-bold text-white mb-4">Real-time Analytics</h3>
-                                <p className="text-gray-300">Track your event's performance with real-time analytics. Monitor ticket sales, attendee demographics, and more.</p>
+                                <p className="text-gray-300">Track your event&apos;s performance with real-time analytics. Monitor ticket sales, attendee demographics, and more.</p>
                             </div>
                         </div>
                     </div>
